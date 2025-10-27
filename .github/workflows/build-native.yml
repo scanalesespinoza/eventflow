@@ -95,7 +95,7 @@ jobs:
           fi
 
       - name: Upload image ref (artifact)
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: pr-image-ref
           path: image-ref.txt
