@@ -1,23 +1,23 @@
-# Ctas metrics
+# CTA metrics
 
 ## Definitions and formulas
-- ** ctas (range) **: Sum of clicks on releases, report ISSUE and KO-FI within the selected range.
-- ** Daily average (by cta and total) ** = `sum_en_rango / nº_días_contemplados_en_el_rango`.
-- ** Simple deviation ** About total daily within the range (population method).
-- ** Picos **:
-  - *Option A (by default) *: Top-3 total range of the range.
-  - *Option B (configurable) *: Total ≥ average + 2 × dev.est.
-- ** Time zone **: The event is used to group per day.
+- **CTAs (range):** Sum of clicks on Releases, Report Issue, and Ko-fi within the selected range.
+- **Daily average (per CTA and total):** `sum_in_range / days_in_range`.
+- **Standard deviation (simple):** Population method over the daily totals within the range.
+- **Peaks:**
+  - *Option A (default):* Top 3 totals within the range.
+  - *Option B (configurable):* Total ≥ average + 2 × standard deviation.
+- **Time zone:** Use the event time zone to group by day.
 
 ## Presentation rules
 - Table ordered by descending date.
-- Badges "peak" with tooltip "peak according to rule configured for this range."
-- Placeholders and messages of "without data to export in this range." When appropriate.
+- "Peak" badges with tooltip "Peak according to the rule configured for this range.".
+- Show "No data to export in this range." placeholders and messages when applicable.
 
 ## Links
--URLS parameterizable by `links.releases-url`,` links.issan-ull` and `links.donate-url`.
-- Recommended Security: `target =" _ Blank "` + `rel =" noopener "`.
+- URLs configurable through `links.releases-url`, `links.issues-url`, and `links.donate-url`.
+- Recommended security attributes: `target="_blank"` + `rel="noopener"`.
 
 ## Privacy and performance
-- PII is not exposed; only added data.
-- Snapshot/metric cache is reused to avoid charging times.
+- Expose only aggregated data; never include PII.
+- Reuse the snapshot/metrics cache to avoid longer load times.

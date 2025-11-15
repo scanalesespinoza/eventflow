@@ -7,4 +7,5 @@ Select your language:
 
 ## Architecture
 
-- [Persistencia](es/architecture/README.md)
+- [Architecture (English)](en/architecture/README.md)
+- [Arquitectura (Español)](es/architecture/README.md)

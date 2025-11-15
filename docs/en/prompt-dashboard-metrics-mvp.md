@@ -1,107 +1,108 @@
-# Prompt for codex - Iteration 1 · Dashboard of metrics (MVP)
+# Prompt for Codex – Iteration 1 · Metrics dashboard (MVP)
 
-## Objective (Business Vision)
-As administrator/or I want a simple and fast metric dashboard that shows me, at a glance, the key activity of the site to make decisions without navigating multiple screens. You must load quickly, be clear and not expose PII.
+## Objective (business vision)
+As an administrator I want a fast, lightweight metrics dashboard that shows the key activity of the site at a glance so I can make decisions without visiting multiple screens. It must load quickly, be clear, and avoid exposing PII.
 
-## Scope - Implementation (application code)
+## Scope – implementation (application code)
 
-1) Display/Admin route → “metric”
-   - Create/update the unique view of Dashboard.
-   - Show “Last update: X min” based on the timestamp of data shown (not the system).
-   - Skeleton Loaders short while the data is resolved.
+1. Display/admin route → `metrics`
+   - Create or update the single dashboard view.
+   - Show “Last updated: X min” based on the timestamp of the displayed data (not the system clock).
+   - Brief skeleton loaders while data is fetched.
 
-2) Global range selector (applies to the entire Dashboard)
-   - Options: Today / last 7 days / last 30 days / the entire event.
-   - Use the same time zone of the event.
-   - When changing the range, refresh cards and tables without navigation and without blocking the UI.
+2. Global range selector (applies to the entire dashboard)
+   - Options: Today / Last 7 days / Last 30 days / Entire event.
+   - Use the event time zone.
+   - Changing the range refreshes cards and tables without navigation and without blocking the UI.
 
-3) Summary cards (upper row)
-   - "Records to my talks (range)" - Total within the range.
-   - "Visits to events (range)" - Total within the range.
-   - "Visits at Start (Rank)" - Total within the range.
-   - "User profile visits (range)" - Total within the range.
-   - "Ctas (rank)" - Three visible counters: releases | Report ISSUE | Ko-fi ☕.
-   - Under each card, short secondary text explaining what is counted (without technicalities).
-   - Empty states: show “0” and the explanatory text (not hide the card).
+3. Summary cards (top row)
+   - “Registrations for my talks (range)” – Total within the selected range.
+   - “Event visits (range)” – Total within the selected range.
+   - “Homepage visits (range)” – Total within the selected range.
+   - “User profile visits (range)” – Total within the selected range.
+   - “CTAs (range)” – Three counters: Releases | Report issue | Ko-fi ☕.
+   - Under each card, short explanatory text describing the metric (non-technical).
+   - Empty state: show `0` plus the explanatory text (do not hide the card).
 
-4) Essential tables (Top 10, without pagination)
-   - “Talks with more records (range)” - Columns: talk · event · records.
-   - “Most visited events (range)” - Columns: Event · Visits.
-   - “Speakers more visited (range)” - Columns: speaker · Profile visits.
-   - “Most visited scenarios (rank)” - Columns: scenario · event · Visits.
-   - Descending order for the main metric; Maximum 10 rows.
-   - Placeholder when there is no data: "Without sufficient data in this range."
+4. Essential tables (Top 10, no pagination)
+   - “Talks with more registrations (range)” – Columns: Talk · Event · Registrations.
+   - “Most visited events (range)” – Columns: Event · Visits.
+   - “Most visited speakers (range)” – Columns: Speaker · Profile visits.
+   - “Most visited stages (range)” – Columns: Stage · Event · Visits.
+   - Sort descending by the main metric; maximum 10 rows.
+   - Placeholder when empty: “Insufficient data for this range.”
 
-5) Data adapters (reading only; without PII)
-   - Connect with existing metric sources and apply the selected range.
-   - Mapear IDS to legible names (talk, event, speaker, stage) using existing services/dominoes.
-   - Ensure correct aggregations by range for each card/table.
-   - Performance: Avoid n+1; Make a single reading by refresh (reuse Snapshot/cache if it exists).
-   - Do not enter new personal identifiers or sensitive data.
+5. Data adapters (read-only, no PII)
+   - Connect to existing metrics sources and apply the selected range.
+   - Map IDs to readable names (talk, event, speaker, stage) using existing services/domains.
+   - Ensure correct aggregations per range for each card/table.
+   - Performance: avoid N+1 queries; make a single read per refresh (reuse snapshot/cache if available).
+   - Do not introduce new personal identifiers or sensitive data.
 
-6) Presentation states and errors
-   - Show Placeholders and clear messages in the absence of data.
-   - Friendly management of reading errors (non -technical message; not blocking all the view).
+6. Presentation states and errors
+   - Show placeholders and clear messages when data is unavailable.
+   - Handle read errors gracefully (non-technical message; do not block the entire view).
 
-7) Accessibility and Responsive (Minimum)
-   - Accessible labels/ARIA on cards and tables.
-   - Logical tabing order.
-   - Correct behavior in medium screens (laptop).
-   -Add Data-Testids for Qa (Ex.: `Data-Testid =" Metrics-Card-Registrations "`).
+7. Accessibility and responsive baseline
+   - Provide accessible labels/ARIA on cards and tables.
+   - Maintain a logical tab order.
+   - Ensure correct behaviour on medium screens (laptops).
+   - Add data-testids for QA (for example, `data-testid="metrics-card-registrations"`).
 
-8) Performance (Product Budget)
-   - Initial load perceived <300 ms with typical data.
-   - Fluid range transitions without jank.
+8. Performance (product budget)
+   - Initial perceived load <300 ms with typical data.
+   - Smooth range transitions with no jank.
 
-## Scope - Documentation (docs to register)
+## Scope – documentation (records to create)
 
 D1) Functional definitions (metric dictionary)
-- "Records to my talks": Total records confirmed to talks within the range.
-- “Visits to events”: Sum of views of detail/listing pages of each event within the range.
-- “Visits at Start”: Views of the home page within the range.
-- "User profile visits": views of the profile section (aggregate, no PII).
-- "Speakers most visited": views of the speaker profile within the range.
-- "Most visited scenarios": views of the stage (and its event) within the range.
-- "Ctas": click on "Releases", "Report Issue", "Ko-Fi".
+- “Registrations for my talks”: Total confirmed registrations for talks within the range.
+- “Event visits”: Sum of detail/listing views for each event within the range.
+- “Homepage visits”: Views of the home page within the range.
+- “User profile visits”: Views of the profile section (aggregated, no PII).
+- “Most visited speakers”: Views of the speaker profile within the range.
+- “Most visited stages”: Views of the stage (and its event) within the range.
+- “CTAs”: Clicks on “Releases”, “Report issue”, “Ko-fi”.
 
-D2) Dashboard use guide (short readme in `docs/`)
-- What shows each card/table.
-- How ranges and "last update" work.
-- Common states ("without sufficient data ...").
+D2) Dashboard usage guide (short README in `docs/`)
+- Describe what each card/table shows.
+- Explain how ranges and “Last updated” work.
+- Enumerate common states (“Insufficient data …”).
 
-D3) Copys/UX (text glossary)- Titles/card labels and tables.
-- State messages (Loaders, without data, non -technical error).
+D3) Copy/UX glossary
+- Titles, card labels, and table headings.
+- State messages (loaders, no data, non-technical error).
 
 D4) Performance and privacy criteria
 - Load budget (<300 ms).
-- Confirmation of "Sin Pii".
-- Good aggregation/reading practices.
+- Confirmation of “No PII”.
+- Good aggregation/read practices.
 
-## Acceptance criteria (DOD)
+## Acceptance criteria (DoD)
 
 - Code -
-- CA1: Cards show correct totals according to the selected range.
-- CA2: Tables Top 10 ordered by its metric; Maximum 10 rows; Placeholder When applying.
-- CA3: Change rank cool cards and tables consistently and fluidly.
-- CA4: “Last update” is calculated based on the data shown and is readable (“MIN MIN”).
-- CA5: Initial load <300 ms with typical data; transitions without blockages.
-- Ca6: Without Pii in UI; Minimum accessibility (ARIA, Tab-Aorder, contrast).
+- CA1: Cards show correct totals for the selected range.
+- CA2: Top-10 tables sorted by their metric; max 10 rows; placeholder when empty.
+- CA3: Changing the range refreshes cards and tables consistently and smoothly.
+- CA4: “Last updated” is based on the displayed data and is readable (“X min”).
+- CA5: Initial load <300 ms with typical data; transitions without blocking.
+- CA6: No PII in the UI; minimum accessibility (ARIA, tab order, contrast).
 
 - Docs -
-- CA7: There is an updated metric dictionary.
-- CA8: There is a brief guide for the use of the dashboard in `docs/`.
-- CA9: Copys/UX documented to maintain consistency.
+- CA7: Metric dictionary updated.
+- CA8: Brief dashboard usage guide available in `docs/`.
+- CA9: Copy/UX reference documented for consistency.
 
-## Functional tests (user/operation)
-- Change between today / 7 days / 30 days / the entire event → figures change consistently.
-- Rank without activity in any category → See “without sufficient data” only in that table.
-- Verify that sums and total are consistent by range.
-- Validate basic accessibility (Tab-Aorder, Labels) and Responsive in Laptop.
-- Verify that "updated x min" changes after a new refresh.
+## Functional tests (user/operations)
+- Switching between Today / 7 days / 30 days / Entire event updates figures consistently.
+- Range without activity in a category shows “Insufficient data” only in that table.
+- Validate sums and totals per range.
+- Validate baseline accessibility (tab order, labels) and laptop responsiveness.
+- Confirm “Updated X min ago” changes after a refresh.
 
-## Out of reach (iteration 1)
-- "See" actions to detail, search and export screens (iteration 2).
-- Trends (%δ), comparative and peaks (iteration 3).
-- Additional Scenario/Scenario/Steaker (Iteration 4).
-- Insights of extended ctas (historical with means/deviations) (iteration 5).
-- Health status of the data module (iteration 6).
+## Out of scope (iteration 1)
+- “View” actions to detail, search, and export screens (iteration 2).
+- Trends (%Δ), comparisons, and peaks (iteration 3).
+- Additional scenario/stage/speaker insights (iteration 4).
+- Extended CTA insights (historical means/deviations) (iteration 5).
+- Data health module (iteration 6).
