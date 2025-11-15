@@ -1,6 +1,6 @@
 # Admin Metrics UI
 
-This page summarizes the layout tokens and breakpoints used in the mobile-first Admin → Métricas screen.
+This page summarizes the layout tokens and breakpoints used in the mobile-first Admin → Metrics screen.
 
 ## Breakpoints
 - ≥1200px: four-column grid

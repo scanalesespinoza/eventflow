@@ -1,8 +1,8 @@
 # Architecture
 
-This section brings together design records and technical notes on the persistence of Eventflow.
+This section gathers design records and technical notes about EventFlow persistence.
 
-- [Persistence options] (persistent -opptions.md)
-- [Persistence service] (Persistence-Service.md)
--[ADR 2025-09-07: Centralized persistence] (ADR-2025-09-07-Persensnce-Service-Centralized.md)
-- [Architecture Rules] (Rules.md)
+- [Persistence options](persistence-options.md)
+- [Persistence service](persistence-service.md)
+- [ADR 2025-09-07: Centralized persistence service](ADR-2025-09-07-persistence-service-centralized.md)
+- [Architecture rules](rules.md)
