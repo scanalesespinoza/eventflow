@@ -1,0 +1,158 @@
+partes:
+  - id: parte-1
+    titulo: "Punto de partida y marco editorial"
+    descripcion: >-
+      Reúne las piezas que presentan al autor, su propósito y la forma en que
+      establece una presencia visible para el proyecto. Sirve como apertura y
+      base ética del libro.
+    capitulos:
+      - id: cap-1
+        titulo: "Identidad y propósito del autor"
+        linea_narrativa: "identidad-y-vision-del-autor"
+        repositorios_clave:
+          - all-about-me
+          - libro-aventuras-de-conocimiento
+          - the-wise-tech
+        objetivo: >-
+          Presentar el marco personal desde el cual se escribe el libro,
+          incluyendo la intención humanista y el vínculo entre tecnología y
+          bienestar. Mostrar cómo esta mirada guía las decisiones posteriores.
+        notas: >-
+          Puede abrir el libro con una introducción biográfica breve y la
+          definición de principios editoriales.
+      - id: cap-2
+        titulo: "Presencia institucional"
+        linea_narrativa: "presencia-digital-e-institucional"
+        repositorios_clave:
+          - acofitec
+        objetivo: >-
+          Explicar la construcción de la presencia digital del autor y su
+          organización, y cómo sostiene la narrativa del proyecto más amplio.
+          Sirve para cerrar el planteamiento inicial antes de pasar a los
+          marcos conceptuales.
+        notas: >-
+          Se puede conectar con el capítulo anterior resaltando la necesidad de
+          visibilidad y coherencia de marca.
+
+  - id: parte-2
+    titulo: "Modelos y fundamentos de organización"
+    descripcion: >-
+      Agrupa los marcos que orientan el diseño de equipos y responsabilidades
+      antes de implementar tecnología. Funciona como puente entre la visión
+      personal y la ejecución técnica.
+    capitulos:
+      - id: cap-3
+        titulo: "Arquitectura organizacional y modelos de trabajo"
+        linea_narrativa: "modelos-de-trabajo-y-arquitectura-organizacional"
+        repositorios_clave:
+          - architecting-teams-before-platforms
+          - three-context-framework
+        objetivo: >-
+          Describir las bases metodológicas para estructurar equipos, contextos
+          y resiliencia organizacional. Mostrar cómo estas ideas preparan el
+          terreno para las plataformas y servicios que aparecen después.
+        notas: >-
+          Puede incluir ejemplos de cómo estos modelos influyen en decisiones de
+          diseño técnico posteriores.
+
+  - id: parte-3
+    titulo: "Plataformas declarativas y resiliencia operativa"
+    descripcion: >-
+      Recoge la evolución de la arquitectura como código y las prácticas de
+      operación resiliente. Muestra cómo las ideas de GitOps se materializan en
+      plataformas y demos que validan su estabilidad.
+    capitulos:
+      - id: cap-4
+        titulo: "Plataformas como código y flujos GitOps"
+        linea_narrativa: "plataformas-declarativas-y-flujos-gitops"
+        repositorios_clave:
+          - arkit8s
+          - eventflow
+          - eventflow-event-as-code
+          - 3scale-gitops-service
+          - deploymentconfig-2-deployment
+          - kubeland
+        objetivo: >-
+          Relatar la construcción de arquitecturas declarativas y pipelines que
+          sincronizan servicios. Enfatizar cómo se definen eventos, despliegues
+          y migraciones de forma repetible.
+        notas: >-
+          Puede organizarse como transición desde los modelos organizativos
+          hacia la implementación práctica de la plataforma.
+      - id: cap-5
+        titulo: "Resiliencia y operación en producción"
+        linea_narrativa: "resiliencia-y-operacion-cloud-native"
+        repositorios_clave:
+          - super-app-framework
+          - minimal-service
+          - updated-manifests-bundle
+          - sc-cloud-native-demo
+          - resilient-app
+          - resilient-frontend
+          - resilient-demo
+          - quarkus-txt-report-frontend
+        objetivo: >-
+          Mostrar la evolución de patrones de resiliencia en servicios
+          cloud-native, desde piezas mínimas hasta demos completas con
+          observabilidad y frontends asociados.
+        notas: >-
+          Puede incorporar comparaciones entre iteraciones para evidenciar cómo
+          madura la confiabilidad.
+
+  - id: parte-4
+    titulo: "Inteligencia aplicada y servicios especializados"
+    descripcion: >-
+      Incluye la exploración de ciencia de datos y machine learning en
+      infraestructura propia, junto con servicios específicos y asistentes que
+      ejemplifican casos de uso concretos.
+    capitulos:
+      - id: cap-6
+        titulo: "ML y ciencia de datos en entornos gestionados"
+        linea_narrativa: "ciencia-de-datos-y-ml-en-produccion"
+        repositorios_clave:
+          - soe-eda-runner
+          - deeplearning-usecases-lib
+          - katsuragi-java-nlp
+        objetivo: >-
+          Documentar cómo se ejecutan flujos de datos y modelos en
+          Kubernetes/OpenShift, y cómo se crean librerías propias para deep
+          learning y NLP.
+        notas: >-
+          Puede conectar con los capítulos de plataforma para resaltar
+          dependencias de infraestructura.
+      - id: cap-7
+        titulo: "Servicios y asistentes especializados"
+        linea_narrativa: "servicios-especializados-y-asistentes"
+        repositorios_clave:
+          - demo-intelligent-administrator
+          - map-service-demo
+          - geto-server
+        objetivo: >-
+          Explorar ejemplos de servicios centrados en resolver tareas
+          específicas, incluyendo automatización, gRPC y comunicación en tiempo
+          real.
+        notas: >-
+          Útil para mostrar diversidad de patrones de servicio y cómo se integran
+          en la plataforma.
+
+  - id: parte-5
+    titulo: "Exploración creativa y mundos lúdicos"
+    descripcion: >-
+      Cierra el recorrido con proyectos de juegos y experiencias interactivas,
+      destacando la dimensión creativa del portafolio más allá de los casos
+      empresariales.
+    capitulos:
+      - id: cap-8
+        titulo: "Diseño de juegos y experiencias narrativas"
+        linea_narrativa: "creatividad-y-mundos-ludicos"
+        repositorios_clave:
+          - ascendant-faith-rpg
+          - java-rpg-proto
+          - battlebit-tower
+        objetivo: >-
+          Mostrar cómo las ideas de narrativa y sistemas de juego se traducen en
+          prototipos y conceptos visuales, evidenciando experimentación y
+          aprendizaje creativo.
+        notas: >-
+          Puede servir como cierre, reforzando la amplitud del recorrido del
+          autor.

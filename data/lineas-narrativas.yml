@@ -1,0 +1,121 @@
+- id: identidad-y-vision-del-autor
+  titulo: "Identidad, propósito editorial y visión humanista"
+  descripcion: >-
+    Línea que reúne las piezas donde el autor explora quién es, cuál es su
+    intención al escribir y cómo desea que la tecnología sirva para el
+    bienestar humano. Conecta el núcleo del libro con la búsqueda personal
+    y con ideas sobre tecnología con propósito.
+  repositorios:
+    - all-about-me
+    - libro-aventuras-de-conocimiento
+    - the-wise-tech
+  notas: >-
+    Funciona como apertura del libro: fija el contexto biográfico y la
+    intención ética que guiará el resto de las historias.
+
+- id: modelos-de-trabajo-y-arquitectura-organizacional
+  titulo: "Modelos de trabajo y arquitectura organizacional"
+  descripcion: >-
+    Agrupa los repositorios dedicados a pensar cómo estructurar equipos y
+    sistemas antes de escribir código. Presenta marcos conceptuales para
+    diseñar responsabilidades, resiliencia y organización del trabajo.
+  repositorios:
+    - architecting-teams-before-platforms
+    - three-context-framework
+  notas: >-
+    Puede dar pie a un capítulo de fundamentos sobre estrategia de
+    equipos y arquitectura previa a las implementaciones técnicas.
+
+- id: plataformas-declarativas-y-flujos-gitops
+  titulo: "Plataformas declarativas y flujos GitOps"
+  descripcion: >-
+    Reúne iniciativas orientadas a describir y operar plataformas como
+    código: arquitecturas vivas, definición de eventos, sincronización de
+    servicios y migraciones en entornos Kubernetes/OpenShift.
+  repositorios:
+    - arkit8s
+    - eventflow
+    - eventflow-event-as-code
+    - 3scale-gitops-service
+    - deploymentconfig-2-deployment
+    - kubeland
+  notas: >-
+    Constituye una línea central sobre cómo evolucionan las ideas de
+    GitOps y declaratividad en el ecosistema.
+
+- id: resiliencia-y-operacion-cloud-native
+  titulo: "Resiliencia y operación cloud native"
+  descripcion: >-
+    Línea centrada en construir y demostrar servicios robustos: patrones
+    de super apps, servicios mínimos, monitoreo de estabilidad y demos
+    completas de resiliencia con Quarkus y frontends asociados.
+  repositorios:
+    - super-app-framework
+    - minimal-service
+    - updated-manifests-bundle
+    - sc-cloud-native-demo
+    - resilient-app
+    - resilient-frontend
+    - resilient-demo
+    - quarkus-txt-report-frontend
+  notas: >-
+    Puede organizarse como un bloque de casos prácticos que muestran la
+    evolución de la resiliencia desde patrones básicos hasta demos
+    integrales.
+
+- id: ciencia-de-datos-y-ml-en-produccion
+  titulo: "Ciencia de datos y ML en producción"
+  descripcion: >-
+    Agrupa experimentos de ejecución de código de datos en Kubernetes,
+    bibliotecas reutilizables de deep learning y un intento de construir
+    NLP en Java desde cero. En conjunto muestran cómo el ML se integra a
+    la infraestructura del autor.
+  repositorios:
+    - soe-eda-runner
+    - deeplearning-usecases-lib
+    - katsuragi-java-nlp
+  notas: >-
+    Puede formar un capítulo que conecte flujos de MLOps con exploraciones
+    de modelos y librerías propias.
+
+- id: servicios-especializados-y-asistentes
+  titulo: "Servicios especializados y asistentes"
+  descripcion: >-
+    Repositorios que ejemplifican la creación de servicios concretos y
+    asistentes inteligentes: desde un administrador automatizado hasta
+    servicios gRPC y servidores websocket para comunicación en tiempo
+    real.
+  repositorios:
+    - demo-intelligent-administrator
+    - map-service-demo
+    - geto-server
+  notas: >-
+    Puede servir como sección de ejemplos breves sobre construcción de
+    servicios enfocados y capacidades de comunicación.
+
+- id: creatividad-y-mundos-ludicos
+  titulo: "Creatividad y mundos lúdicos"
+  descripcion: >-
+    Línea que muestra la faceta de diseño de juegos y experiencias
+    interactivas: un RPG mítico, un prototipo de RPG en Java y un proyecto
+    de estética y dinámica Tower. Destaca la experimentación narrativa y
+    visual del ecosistema.
+  repositorios:
+    - ascendant-faith-rpg
+    - java-rpg-proto
+    - battlebit-tower
+  notas: >-
+    Puede funcionar como capítulo complementario para mostrar la diversidad
+    del portafolio más allá de lo empresarial.
+
+- id: presencia-digital-e-institucional
+  titulo: "Presencia digital e institucional"
+  descripcion: >-
+    Incluye la construcción del sitio principal de Acofitec, que refleja
+    la necesidad de mantener una presencia web formal dentro del conjunto
+    de proyectos.
+  repositorios:
+    - acofitec
+  notas: >-
+    Línea breve que puede integrarse como sección corta o estudio de caso
+    sobre creación de sitios institucionales.
